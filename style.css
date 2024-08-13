@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+/*hero section*/
+.navbar{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    padding:12px 32px;
+    align-items:center;
+    justify-content:space-between;
+    height:20vh;
+
+}
+.logo{
+    width:95px;
+}
+.logo>img{
+    width:100%;
+}
+.hero{          
+    width:100vw;
+    background-image:url(images/hero-bg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    position:relative;
+    height:100vh;
+     
+}
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    
+}
+.nav-links{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    justify-content:center;
+}
+#active{
+    color:#FEA116;
+}
+.nav-btn{
+    padding:8px 24px;
+    background-color:#FEA116;
+    transition:0.2s;
+
+}
+.nav-btn:hover{
+    background-color:white;
+    color:black;
+    box-shadow: 4px 4px 15px black;
+    transform:scale(0.75) translateY(4px);
+
+}
+.main-heading-container{
+    height:80vh;
+    padding:20px 32px;
+    padding-bottom:40px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+.main-heading>h1{
+    color:white;
+    font-size:60px;
+    
+}
+.main-heading>p{
+    color:white;
+    font-size:16px;
+}
+.hero-btn{
+    padding:12px 32px;
+    margin-top:18px;
+    background-color:orange;
+    font-size:16px;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+
+}
+
+.hero-food{
+    width:50%;
+    display:flex;
+    justify-content: flex-end;  
+}
+.main-heading{
+    width:50%;
+}
+.hero-food>img{
+    width:80%;
+    object-fit:contain;
+    
+}
+.hero-overlay{
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,0.6);
+    position:absolute;
+    z-index:1;
+}
+.hero *{
+    z-index:2;
+}
+
+/*this is for view in tablet  and mobile from laptop*/
+
+
+    #open{
+        width:50px;
+        display:none;
+    }
+    #close{
+        width:50px;
+        display:none;
+
+    }
+    .body{
+        position:relative;
+        overflow:hidden;
+    }
+
+    @media(max-width:1024px)             /*@media screen and(max-width:1024px)*/
+{
+
+    #open{
+        display:block;
+        cursor:pointer;
+    }
+    #close{
+        display:block;
+        cursor:pointer;
+    }
+    .nav-links{
+        position:absolute;
+        top:0;
+        right:-250px;
+        flex-direction:column;
+        padding:20px 0px;
+        height:100vh;
+        background-color:rgb(138, 127, 127);
+        justify-content: flex-start;
+        z-index:99;
+        width:200px;
+        gap:40px;
+        transition:0.4s;
+    }
+}
+    
